@@ -1,4 +1,5 @@
-﻿using FluentValidation.Results;
+﻿using FluentValidation;
+using FluentValidation.Results;
 using NSubstitute;
 using StorageMailNotifier.Application.Contracts.UseCases;
 using StorageMailNotifier.Application.Models;
@@ -26,7 +27,9 @@ internal class NotifyFileUploadedShould
 
         validatorMock = Substitute.For<NotifyFileUploadedValidator>();
 
-        notifyFileUploaded = new NotifyFileUploaded(emailServiceMock);
+        notifyFileUploaded = new NotifyFileUploaded(
+            emailServiceMock,
+            validatorMock);
 
         request = new OnFileUploadFinished
         {
@@ -143,7 +146,7 @@ internal class NotifyFileUploadedShould
     }
 
     [Test]
-    public async Task Validate_When_Notify_With_Requested_URL()
+    public async Task Validate_When_Notify()
     {
         #region Arrange(Given)
 
@@ -154,9 +157,11 @@ internal class NotifyFileUploadedShould
             validationFailure 
         };
 
+        var validationResult = new ValidationResult(validationFailures);
+
         validatorMock
             .Validate(request)
-            .Returns(new ValidationResult(validationFailures));
+            .ReturnsForAnyArgs(validationResult);
 
         #endregion
 
