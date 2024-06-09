@@ -71,4 +71,28 @@ internal class NotifyFileUploadedValidatorShould
 
         #endregion
     }
+    
+    [Test]
+    public void Validate_Blob_Trigger()
+    {
+        #region Arrange(Given)
+
+        request.BlobTrigger = string.Empty;
+
+        #endregion
+
+        #region Act(When)
+
+        ValidationResult result = validator.Validate(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        Assert.That(result.IsValid, Is.False);
+
+        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'Blob Trigger' must not be empty."));
+
+        #endregion
+    }
 }
