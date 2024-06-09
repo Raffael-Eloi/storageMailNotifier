@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using StorageMailNotifier.Application.Models;
 
-namespace StorageMailNotifier.Application.Tests.Validators;
+namespace StorageMailNotifier.Application.Validators;
 
-internal class NotifyFileUploadedValidator : AbstractValidator<OnFileUploadFinished>
+public class NotifyFileUploadedValidator : AbstractValidator<OnFileUploadFinished>
 {
     public NotifyFileUploadedValidator()
     {

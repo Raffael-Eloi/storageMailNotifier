@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using StorageMailNotifier.Application.Models;
+using StorageMailNotifier.Application.Validators;
 
 namespace StorageMailNotifier.Application.Tests.Validators;
 
