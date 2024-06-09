@@ -115,7 +115,7 @@ internal class NotifyFileUploadedValidatorShould
 
         Assert.That(result.IsValid, Is.False);
 
-        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'Uri' must not be null."));
+        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'Uri' must not be empty."));
 
         #endregion
     }
