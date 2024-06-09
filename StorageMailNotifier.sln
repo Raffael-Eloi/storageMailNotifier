@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2A9DF4EF-9B32-4EAB-BD59-19995AD02B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobStorageListner", "src\BlobStorageListner\BlobStorageListner.csproj", "{46B03593-A56B-4D3A-8699-13C16C57629D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46B03593-A56B-4D3A-8699-13C16C57629D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B03593-A56B-4D3A-8699-13C16C57629D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B03593-A56B-4D3A-8699-13C16C57629D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B03593-A56B-4D3A-8699-13C16C57629D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46B03593-A56B-4D3A-8699-13C16C57629D} = {2A9DF4EF-9B32-4EAB-BD59-19995AD02B01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1587495-1079-4709-969C-F25FDE90BD0F}
