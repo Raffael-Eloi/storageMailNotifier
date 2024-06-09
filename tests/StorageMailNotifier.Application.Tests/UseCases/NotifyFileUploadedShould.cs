@@ -22,7 +22,10 @@ internal class NotifyFileUploadedShould
 
         notifyFileUploaded = new NotifyFileUploaded(emailServiceMock);
 
-        request = new OnFileUploadFinished();
+        request = new OnFileUploadFinished
+        {
+            Uri = new Uri("https://something/text.txt")
+        };
     }
 
     [Test]

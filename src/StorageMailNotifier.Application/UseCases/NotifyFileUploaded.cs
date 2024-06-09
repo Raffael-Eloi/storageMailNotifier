@@ -21,6 +21,7 @@ public class NotifyFileUploaded : INotifyFileUploaded
             BlobContent = request.BlobContent,
             FileName = request.FileName,
             BlobTrigger = request.BlobTrigger,
+            OriginURL = request.Uri.AbsoluteUri
         };
 
         await _emailServiceMock.NotifyAsync(notifyRequest);
