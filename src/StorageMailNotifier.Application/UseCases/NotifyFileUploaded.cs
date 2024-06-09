@@ -21,12 +21,16 @@ public class NotifyFileUploaded : INotifyFileUploaded
         _validator = validator;
     }
 
-    public async Task NotifyAsync(OnFileUploadFinished request)
+    public async Task<NotifyFileUploadedResponse> NotifyAsync(OnFileUploadFinished request)
     {
         ValidationResult validation = _validator.Validate(request);
 
-        if (!validation.IsValid) 
-            return;
+        if (!validation.IsValid)
+        {
+            var invalidResponse = new NotifyFileUploadedResponse();
+            invalidResponse.Errors = validation.Errors;
+            return invalidResponse;
+        }
 
         var notifyRequest = new NotifyEmailRequest
         {
@@ -37,5 +41,7 @@ public class NotifyFileUploaded : INotifyFileUploaded
         };
 
         await _emailServiceMock.NotifyAsync(notifyRequest);
+
+        return null;
     }
 }

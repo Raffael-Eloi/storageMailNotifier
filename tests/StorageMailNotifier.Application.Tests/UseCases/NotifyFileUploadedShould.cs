@@ -167,7 +167,7 @@ internal class NotifyFileUploadedShould
 
         #region Act(When)
 
-        await notifyFileUploaded.NotifyAsync(request);
+        NotifyFileUploadedResponse response = await notifyFileUploaded.NotifyAsync(request);
 
         #endregion
 
@@ -176,6 +176,8 @@ internal class NotifyFileUploadedShould
         await emailServiceMock
             .DidNotReceive()
             .NotifyAsync(Arg.Any<NotifyEmailRequest>());
+
+        Assert.That(response.IsValid, Is.False);
 
         #endregion
     }

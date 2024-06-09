@@ -4,5 +4,5 @@ namespace StorageMailNotifier.Application.Contracts.UseCases;
 
 public interface INotifyFileUploaded
 {
-    Task NotifyAsync(OnFileUploadFinished request);
+    Task<NotifyFileUploadedResponse> NotifyAsync(OnFileUploadFinished request);
 }
