@@ -35,6 +35,10 @@ internal class NotifyFileUploadedShould
         {
             Uri = new Uri("https://something/text.txt")
         };
+
+        validatorMock
+            .Validate(request)
+            .ReturnsForAnyArgs(new ValidationResult());
     }
 
     [Test]

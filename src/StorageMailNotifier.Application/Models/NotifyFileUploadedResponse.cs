@@ -9,6 +9,11 @@ public class NotifyFileUploadedResponse
         Errors = Enumerable.Empty<ValidationFailure>();    
     }
 
+    public NotifyFileUploadedResponse(IEnumerable<ValidationFailure> errors)
+    {
+        Errors = errors;
+    }
+
     public IEnumerable<ValidationFailure> Errors { get; set; }
 
     public bool IsValid => !Errors.Any();

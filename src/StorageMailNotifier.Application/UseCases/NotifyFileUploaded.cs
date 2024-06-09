@@ -23,25 +23,47 @@ public class NotifyFileUploaded : INotifyFileUploaded
 
     public async Task<NotifyFileUploadedResponse> NotifyAsync(OnFileUploadFinished request)
     {
-        ValidationResult validation = _validator.Validate(request);
-
-        if (!validation.IsValid)
+        if (RequestIsInvalid(request, out ValidationResult validation))
         {
-            var invalidResponse = new NotifyFileUploadedResponse();
-            invalidResponse.Errors = validation.Errors;
-            return invalidResponse;
+            return InvalidResponse(validation);
         }
+        await NotifyEmail(request);
 
-        var notifyRequest = new NotifyEmailRequest
+        return SuccessfulResponse();
+    }
+
+    private bool RequestIsInvalid(OnFileUploadFinished request, out ValidationResult validation)
+    {
+        validation = _validator.Validate(request);
+
+        return !validation.IsValid;
+    }
+    
+    private static NotifyFileUploadedResponse InvalidResponse(ValidationResult validation)
+    {
+        return new NotifyFileUploadedResponse(validation.Errors);
+    }
+
+    private static NotifyEmailRequest CreateNotifyRequest(OnFileUploadFinished request)
+    {
+        return new NotifyEmailRequest
         {
             BlobContent = request.BlobContent,
             FileName = request.FileName,
             BlobTrigger = request.BlobTrigger,
             OriginURL = request.Uri!.AbsoluteUri
         };
+    }
+
+    private async Task NotifyEmail(OnFileUploadFinished request)
+    {
+        NotifyEmailRequest notifyRequest = CreateNotifyRequest(request);
 
         await _emailServiceMock.NotifyAsync(notifyRequest);
+    }
 
-        return null;
+    private static NotifyFileUploadedResponse SuccessfulResponse()
+    {
+        return new NotifyFileUploadedResponse();
     }
 }
