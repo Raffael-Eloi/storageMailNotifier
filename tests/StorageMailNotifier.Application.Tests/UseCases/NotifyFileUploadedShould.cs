@@ -105,4 +105,31 @@ internal class NotifyFileUploadedShould
 
         #endregion
     }
+    
+    [Test]
+    public async Task Notify_With_Requested_URL()
+    {
+        #region Arrange(Given)
+
+        string url = "https://azure/storageaccount/mycontainer/my-file.txt";
+        request.Uri = new Uri(url);
+
+        #endregion
+
+        #region Act(When)
+
+        await notifyFileUploaded.NotifyAsync(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        await emailServiceMock
+            .Received()
+            .NotifyAsync(Arg.Is<NotifyEmailRequest>(
+                req => 
+                    req.OriginURL == url));
+
+        #endregion
+    }
 }
