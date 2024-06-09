@@ -101,7 +101,7 @@ internal class NotifyFileUploadedShould
             .Received()
             .NotifyAsync(Arg.Is<NotifyEmailRequest>(
                 req => 
-                    req.FileName == blobTrigger));
+                    req.BlobTrigger == blobTrigger));
 
         #endregion
     }
