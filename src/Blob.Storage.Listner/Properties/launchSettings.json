@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "BlobStorageListner": {
+    "Blob.Storage.Listner": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7284",
+      "commandLineArgs": "--port 7253",
       "launchBrowser": false
     }
   }
