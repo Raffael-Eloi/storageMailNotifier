@@ -19,6 +19,7 @@ public class NotifyFileUploaded : INotifyFileUploaded
         var notifyRequest = new NotifyEmailRequest
         {
             BlobContent = request.BlobContent,
+            FileName = request.FileName,
         };
 
         await _emailServiceMock.NotifyAsync(notifyRequest);
