@@ -78,4 +78,31 @@ internal class NotifyFileUploadedShould
 
         #endregion
     }
+    
+    [Test]
+    public async Task Notify_With_BlobTrigger()
+    {
+        #region Arrange(Given)
+
+        string blobTrigger = "mycontainer/my-file.txt";
+        request.BlobTrigger = blobTrigger;
+
+        #endregion
+
+        #region Act(When)
+
+        await notifyFileUploaded.NotifyAsync(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        await emailServiceMock
+            .Received()
+            .NotifyAsync(Arg.Is<NotifyEmailRequest>(
+                req => 
+                    req.FileName == blobTrigger));
+
+        #endregion
+    }
 }
