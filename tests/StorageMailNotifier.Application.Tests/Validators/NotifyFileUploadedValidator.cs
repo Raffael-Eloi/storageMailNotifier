@@ -8,5 +8,6 @@ internal class NotifyFileUploadedValidator : AbstractValidator<OnFileUploadFinis
     public NotifyFileUploadedValidator()
     {
         RuleFor(fileUploaded => fileUploaded.BlobContent).NotEmpty();
+        RuleFor(fileUploaded => fileUploaded.FileName).NotEmpty();
     }
 }

@@ -67,7 +67,7 @@ internal class NotifyFileUploadedValidatorShould
 
         Assert.That(result.IsValid, Is.False);
 
-        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'FileName' must not be empty."));
+        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'File Name' must not be empty."));
 
         #endregion
     }
