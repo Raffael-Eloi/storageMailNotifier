@@ -95,4 +95,28 @@ internal class NotifyFileUploadedValidatorShould
 
         #endregion
     }
+    
+    [Test]
+    public void Validate_Uri()
+    {
+        #region Arrange(Given)
+
+        request.Uri = null;
+
+        #endregion
+
+        #region Act(When)
+
+        ValidationResult result = validator.Validate(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        Assert.That(result.IsValid, Is.False);
+
+        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'Uri' must not be null."));
+
+        #endregion
+    }
 }
