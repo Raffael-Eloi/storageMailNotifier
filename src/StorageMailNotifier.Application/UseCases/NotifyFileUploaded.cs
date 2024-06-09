@@ -1,20 +1,26 @@
 ﻿using StorageMailNotifier.Application.Contracts.UseCases;
 using StorageMailNotifier.Application.Models;
 using StorageMailNotifier.Domain.Contracts.Services;
+using StorageMailNotifier.Domain.Models;
 
 namespace StorageMailNotifier.Application.UseCases;
 
 public class NotifyFileUploaded : INotifyFileUploaded
 {
-    private IEmailService emailServiceMock;
+    private IEmailService _emailServiceMock;
 
     public NotifyFileUploaded(IEmailService emailServiceMock)
     {
-        this.emailServiceMock = emailServiceMock;
+        _emailServiceMock = emailServiceMock;
     }
 
-    public Task NotifyAsync(OnFileUploadFinished request)
+    public async Task NotifyAsync(OnFileUploadFinished request)
     {
-        throw new NotImplementedException();
+        var notifyRequest = new NotifyEmailRequest
+        {
+            BlobContent = request.BlobContent,
+        };
+
+        await _emailServiceMock.NotifyAsync(notifyRequest);
     }
 }
