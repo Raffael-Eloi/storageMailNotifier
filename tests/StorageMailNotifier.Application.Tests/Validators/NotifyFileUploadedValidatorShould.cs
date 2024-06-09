@@ -1,5 +1,5 @@
-﻿using StorageMailNotifier.Application.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using FluentValidation.Results;
+using StorageMailNotifier.Application.Models;
 
 namespace StorageMailNotifier.Application.Tests.Validators;
 
@@ -12,7 +12,7 @@ internal class NotifyFileUploadedValidatorShould
 
         var request = new OnFileUploadFinished();
 
-        INotifyFileUploadedValidator validator = new NotifyFileUploadedValidator();
+        var validator = new NotifyFileUploadedValidator();
 
         #endregion
 
@@ -26,8 +26,8 @@ internal class NotifyFileUploadedValidatorShould
 
         Assert.That(result, Is.Not.Null);
 
-        Assert.That(result.ErrorMessage, Is.Not.Null);
-        Assert.That(result.ErrorMessage, Is.EqualTo("The content is required"));
+        Assert.That(result.IsValid, Is.False);
+        Assert.That(result.Errors.First().ErrorMessage, Is.EqualTo("'Blob Content' must not be empty."));
 
         #endregion
     }

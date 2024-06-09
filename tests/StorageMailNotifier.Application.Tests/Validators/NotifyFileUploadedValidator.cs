@@ -1,12 +1,12 @@
-﻿using StorageMailNotifier.Application.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using FluentValidation;
+using StorageMailNotifier.Application.Models;
 
 namespace StorageMailNotifier.Application.Tests.Validators;
 
-internal class NotifyFileUploadedValidator : INotifyFileUploadedValidator
+internal class NotifyFileUploadedValidator : AbstractValidator<OnFileUploadFinished>
 {
-    public ValidationResult Validate(OnFileUploadFinished request)
+    public NotifyFileUploadedValidator()
     {
-        throw new NotImplementedException();
+        RuleFor(fileUploaded => fileUploaded.BlobContent).NotEmpty();
     }
 }
