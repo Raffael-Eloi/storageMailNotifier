@@ -77,4 +77,31 @@ internal class EmailServiceShould
 
         #endregion
     }
+    
+    [Test]
+    public async Task Send_Email_With_Subject_Information()
+    {
+        #region Arrange(Given)
+
+        string subject = "A file has just been uploaded into your Azure AC container";
+
+        #endregion
+
+        #region Act(When)
+
+        await emailService.NotifyAsync(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        await emailRepositoryMock
+            .Received()
+            .SendEmailAsync(Arg.Is<MailMessage>(
+                mailMessage => 
+                    mailMessage.Subject == subject)
+            );
+
+        #endregion
+    }
 }
