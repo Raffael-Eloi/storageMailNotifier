@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Applica
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{91064683-FB91-4434-9550-3A6E0DAC6E80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Domain", "src\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj", "{E745C7E8-19D4-47CF-86DC-8705816EC552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Domain", "src\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj", "{E745C7E8-19D4-47CF-86DC-8705816EC552}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{2C3F919C-B324-4083-BD76-4367F496A327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Infrastructure", "src\StorageMailNotifier.Infrastructure\StorageMailNotifier.Infrastructure.csproj", "{D126D874-2F90-4C9C-9C3E-7E7543870814}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{E745C7E8-19D4-47CF-86DC-8705816EC552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E745C7E8-19D4-47CF-86DC-8705816EC552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E745C7E8-19D4-47CF-86DC-8705816EC552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D126D874-2F90-4C9C-9C3E-7E7543870814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D126D874-2F90-4C9C-9C3E-7E7543870814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D126D874-2F90-4C9C-9C3E-7E7543870814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D126D874-2F90-4C9C-9C3E-7E7543870814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{2064D8A7-997E-42B4-AF0D-F81A4613F11C} = {CE875171-BBAD-4146-8FF9-66B04285CC1B}
 		{D015F9BB-F8C6-477F-ADE3-D6B53430CA01} = {CE875171-BBAD-4146-8FF9-66B04285CC1B}
 		{E745C7E8-19D4-47CF-86DC-8705816EC552} = {91064683-FB91-4434-9550-3A6E0DAC6E80}
+		{D126D874-2F90-4C9C-9C3E-7E7543870814} = {2C3F919C-B324-4083-BD76-4367F496A327}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1587495-1079-4709-969C-F25FDE90BD0F}
