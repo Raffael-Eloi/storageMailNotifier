@@ -104,4 +104,46 @@ internal class EmailServiceShould
 
         #endregion
     }
+    
+    [Test]
+    public async Task Send_Email_With_Body_Information()
+    {
+        #region Arrange(Given)
+
+        request = new NotifyEmailRequest
+        {
+            BlobContent = "This is the file content",
+            FileName = "my-file.txt",
+            BlobTrigger = "container/my-file.txt",
+            OriginURL = "https:originurl.com"
+        };
+
+        string body = @$"
+            The file {request.FileName} has been uploaded to your container.
+            Blob trigger: {request.BlobTrigger}
+            Origin URL: {request.OriginURL}
+            
+            Content: 
+            {request.BlobContent}
+        ";
+
+        #endregion
+
+        #region Act(When)
+
+        await emailService.NotifyAsync(request);
+
+        #endregion
+
+        #region Assert(Then)
+
+        await emailRepositoryMock
+            .Received()
+            .SendEmailAsync(Arg.Is<MailMessage>(
+                mailMessage => 
+                    mailMessage.Body == body)
+            );
+
+        #endregion
+    }
 }
