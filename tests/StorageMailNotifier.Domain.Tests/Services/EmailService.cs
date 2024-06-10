@@ -16,7 +16,14 @@ internal class EmailService : IEmailService
 
     public async Task NotifyAsync(NotifyEmailRequest request)
     {
-        var mailMessage = new MailMessage(from: "raffaeleloi.lab@gmail.com", to: "raffaeleloi121@gmail.com", subject: "A file has just been uploaded into your Azure AC container", "");
+        var mailMessage = new MailMessage(from: "raffaeleloi.lab@gmail.com", to: "raffaeleloi121@gmail.com", subject: "A file has just been uploaded into your Azure AC container", body: @$"
+            The file {request.FileName} has been uploaded to your container.
+            Blob trigger: {request.BlobTrigger}
+            Origin URL: {request.OriginURL}
+            
+            Content: 
+            {request.BlobContent}
+        ");
 
         await _emailRepository.SendEmailAsync(mailMessage);
     }
