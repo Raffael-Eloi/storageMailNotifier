@@ -16,7 +16,7 @@ internal class EmailService : IEmailService
 
     public async Task NotifyAsync(NotifyEmailRequest request)
     {
-        var mailMessage = new MailMessage(from: "raffaeleloi.lab@gmail.com", to: "something@a.com");
+        var mailMessage = new MailMessage(from: "raffaeleloi.lab@gmail.com", to: "raffaeleloi121@gmail.com");
 
         await _emailRepository.SendEmailAsync(mailMessage);
     }
