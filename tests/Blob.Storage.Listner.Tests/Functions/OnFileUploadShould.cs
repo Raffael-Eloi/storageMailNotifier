@@ -7,6 +7,18 @@ namespace Blob.Storage.Listner.Tests.Functions;
 
 internal class OnFileUploadShould
 {
+    private INotifyFileUploaded notifyFileUploadedMock;
+    
+    private OnFileUpload onFileUpload;
+
+    [SetUp]
+    public void SetUp()
+    {
+        notifyFileUploadedMock = Substitute.For<INotifyFileUploaded>();
+
+        onFileUpload = new OnFileUpload(notifyFileUploadedMock);
+    }
+
     [Test]
     public async Task Notify_When_Upload()
     {
@@ -17,10 +29,6 @@ internal class OnFileUploadShould
         string blobTrigger = "mycontainer/my-file.txt";
         string url = "https://azure/storageaccount/mycontainer/my-file.txt";
         var uri = new Uri(url);
-
-        var onFileUpload = new OnFileUpload();
-
-        var notifyFileUploadedMock = Substitute.For<INotifyFileUploaded>();
 
         #endregion
 
