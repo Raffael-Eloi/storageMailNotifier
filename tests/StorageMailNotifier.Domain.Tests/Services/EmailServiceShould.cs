@@ -17,7 +17,7 @@ internal class EmailServiceShould
 
         var emailRepositoryMock = Substitute.For<IEmailRepository>();
 
-        IEmailService emailService = new EmailService();
+        IEmailService emailService = new EmailService(emailRepositoryMock);
 
         string from = "raffaeleloi.lab@gmail.com";
 
