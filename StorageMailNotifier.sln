@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Infrast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Domain.Tests", "tests\StorageMailNotifier.Domain.Tests\StorageMailNotifier.Domain.Tests.csproj", "{2701D873-6E90-4AF8-B28D-58C068F02D2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blob.Storage.Listner.Tests", "tests\Blob.Storage.Listner.Tests\Blob.Storage.Listner.Tests.csproj", "{BECA96DA-E5DF-4211-94B9-4033C0571334}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{2701D873-6E90-4AF8-B28D-58C068F02D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2701D873-6E90-4AF8-B28D-58C068F02D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2701D873-6E90-4AF8-B28D-58C068F02D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECA96DA-E5DF-4211-94B9-4033C0571334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECA96DA-E5DF-4211-94B9-4033C0571334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECA96DA-E5DF-4211-94B9-4033C0571334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECA96DA-E5DF-4211-94B9-4033C0571334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{E745C7E8-19D4-47CF-86DC-8705816EC552} = {91064683-FB91-4434-9550-3A6E0DAC6E80}
 		{D126D874-2F90-4C9C-9C3E-7E7543870814} = {2C3F919C-B324-4083-BD76-4367F496A327}
 		{2701D873-6E90-4AF8-B28D-58C068F02D2E} = {91064683-FB91-4434-9550-3A6E0DAC6E80}
+		{BECA96DA-E5DF-4211-94B9-4033C0571334} = {2A9DF4EF-9B32-4EAB-BD59-19995AD02B01}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1587495-1079-4709-969C-F25FDE90BD0F}

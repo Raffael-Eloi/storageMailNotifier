@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Blob.Storage.Listner\Blob.Storage.Listner.csproj" />
   </ItemGroup>
 
   <ItemGroup>
