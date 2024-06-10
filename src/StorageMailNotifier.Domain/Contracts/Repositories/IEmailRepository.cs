@@ -4,5 +4,5 @@ namespace StorageMailNotifier.Domain.Contracts.Repositories;
 
 public interface IEmailRepository
 {
-    Task SendEmailAsync(MailMessage mailMessage);
+    Task SendEmailAsync(MailMessage mail);
 }

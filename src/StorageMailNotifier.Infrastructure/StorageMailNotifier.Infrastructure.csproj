@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
