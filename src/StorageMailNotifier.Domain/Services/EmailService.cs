@@ -3,9 +3,9 @@ using StorageMailNotifier.Domain.Contracts.Services;
 using StorageMailNotifier.Domain.Models;
 using System.Net.Mail;
 
-namespace StorageMailNotifier.Domain.Tests.Services;
+namespace StorageMailNotifier.Domain.Services;
 
-internal class EmailService : IEmailService
+public class EmailService : IEmailService
 {
     private readonly IEmailRepository _emailRepository;
 
@@ -17,7 +17,7 @@ internal class EmailService : IEmailService
     public async Task NotifyAsync(NotifyEmailRequest request)
     {
         MailMessage mailMessage = CreateMailMessage(request);
-        
+
         await SendEmail(mailMessage);
     }
 

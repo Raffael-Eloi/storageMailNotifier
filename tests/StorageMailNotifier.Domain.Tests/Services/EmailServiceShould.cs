@@ -2,6 +2,7 @@
 using StorageMailNotifier.Domain.Contracts.Repositories;
 using StorageMailNotifier.Domain.Contracts.Services;
 using StorageMailNotifier.Domain.Models;
+using StorageMailNotifier.Domain.Services;
 using System.Net.Mail;
 
 namespace StorageMailNotifier.Domain.Tests.Services;

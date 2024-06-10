@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StorageMailNotifier.Application\StorageMailNotifier.Application.csproj" />
+    <ProjectReference Include="..\StorageMailNotifier.Infrastructure.IoC\StorageMailNotifier.Infrastructure.IoC.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

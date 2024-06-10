@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.9.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj" />
+    <ProjectReference Include="..\StorageMailNotifier.Application\StorageMailNotifier.Application.csproj" />
+    <ProjectReference Include="..\StorageMailNotifier.Infrastructure\StorageMailNotifier.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
