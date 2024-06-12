@@ -19,13 +19,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Domain"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{2C3F919C-B324-4083-BD76-4367F496A327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Infrastructure", "src\StorageMailNotifier.Infrastructure\StorageMailNotifier.Infrastructure.csproj", "{D126D874-2F90-4C9C-9C3E-7E7543870814}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Infrastructure", "src\StorageMailNotifier.Infrastructure\StorageMailNotifier.Infrastructure.csproj", "{D126D874-2F90-4C9C-9C3E-7E7543870814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Domain.Tests", "tests\StorageMailNotifier.Domain.Tests\StorageMailNotifier.Domain.Tests.csproj", "{2701D873-6E90-4AF8-B28D-58C068F02D2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Domain.Tests", "tests\StorageMailNotifier.Domain.Tests\StorageMailNotifier.Domain.Tests.csproj", "{2701D873-6E90-4AF8-B28D-58C068F02D2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blob.Storage.Listner.Tests", "tests\Blob.Storage.Listner.Tests\Blob.Storage.Listner.Tests.csproj", "{BECA96DA-E5DF-4211-94B9-4033C0571334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blob.Storage.Listner.Tests", "tests\Blob.Storage.Listner.Tests\Blob.Storage.Listner.Tests.csproj", "{BECA96DA-E5DF-4211-94B9-4033C0571334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageMailNotifier.Infrastructure.IoC", "src\StorageMailNotifier.Infrastructure.IoC\StorageMailNotifier.Infrastructure.IoC.csproj", "{3F7FE653-8928-4254-9771-0270D6D2752F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Infrastructure.IoC", "src\StorageMailNotifier.Infrastructure.IoC\StorageMailNotifier.Infrastructure.IoC.csproj", "{3F7FE653-8928-4254-9771-0270D6D2752F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Delivery", "0 - Delivery", "{91A6C97F-7DEA-4B2B-A5E4-A0B73F9C89D0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-cd-pipeline.yml = .github\workflows\ci-cd-pipeline.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
