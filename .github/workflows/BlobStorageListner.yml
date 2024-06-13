@@ -1,17 +1,17 @@
-name: Build and deploy .NET Core application to Function App StorageMailNotifier
+name: Build and deploy .NET Core application to Function App BlobStorageListner
 on:
   push:
     branches:
     - main
 env:
-  AZURE_FUNCTIONAPP_NAME: StorageMailNotifier
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: src\Blob.Storage.Listner\published
+  AZURE_FUNCTIONAPP_NAME: BlobStorageListner
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: src/Blob.Storage.Listner/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: src\Blob.Storage.Listner
+  WORKING_DIRECTORY: src/Blob.Storage.Listner
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET SDK
@@ -30,7 +30,7 @@ jobs:
         name: functionapp
         path: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: build
     steps:
     - name: Download artifact from build job
@@ -42,5 +42,5 @@ jobs:
       uses: Azure/functions-action@v1
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        publish-profile: ${{ secrets.StorageMailNotifier_FCEC }}
+        publish-profile: ${{ secrets.BlobStorageListner_A037 }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
