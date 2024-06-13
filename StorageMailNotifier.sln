@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{2A9DF4EF-9B32-4EAB-BD59-19995AD02B01}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{2A9DF4EF-9B32-4EAB-BD59-19995AD02B01}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blob.Storage.Listner", "src\Blob.Storage.Listner\Blob.Storage.Listner.csproj", "{D72A15E8-132A-460A-B588-3E1A94E293CF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{CE875171-BBAD-4146-8FF9-66B04285CC1B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{CE875171-BBAD-4146-8FF9-66B04285CC1B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Application", "src\StorageMailNotifier.Application\StorageMailNotifier.Application.csproj", "{2064D8A7-997E-42B4-AF0D-F81A4613F11C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Application.Tests", "tests\StorageMailNotifier.Application.Tests\StorageMailNotifier.Application.Tests.csproj", "{D015F9BB-F8C6-477F-ADE3-D6B53430CA01}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{91064683-FB91-4434-9550-3A6E0DAC6E80}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{91064683-FB91-4434-9550-3A6E0DAC6E80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Domain", "src\StorageMailNotifier.Domain\StorageMailNotifier.Domain.csproj", "{E745C7E8-19D4-47CF-86DC-8705816EC552}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{2C3F919C-B324-4083-BD76-4367F496A327}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{2C3F919C-B324-4083-BD76-4367F496A327}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Infrastructure", "src\StorageMailNotifier.Infrastructure\StorageMailNotifier.Infrastructure.csproj", "{D126D874-2F90-4C9C-9C3E-7E7543870814}"
 EndProject
