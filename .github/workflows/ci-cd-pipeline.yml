@@ -44,3 +44,4 @@ jobs:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         publish-profile: ${{ secrets.StorageMailNotifier_FCEC }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+        zip-deploy: true
