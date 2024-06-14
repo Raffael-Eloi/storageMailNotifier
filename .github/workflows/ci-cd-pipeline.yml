@@ -33,10 +33,22 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Run tests
+    - name: Domain Tests
       run: |
-        ls
         cd tests
+        cd StorageMailNotifier.Domain.Tests    
+        dotnet test 
+        
+    - name: Application Tests
+      run: |
+        cd tests
+        cd StorageMailNotifier.Application.Tests
+        dotnet test 
+        
+    - name: Function Tests
+      run: |
+        cd tests
+        cd Blob.Storage.Listner.Tests    
         dotnet test 
         
   buildFunction:
