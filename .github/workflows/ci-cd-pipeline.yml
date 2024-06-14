@@ -1,4 +1,4 @@
-name: Build and deploy .NET Core application to Function App BlobStorageListner
+name: CI-CD Pipeline
 on:
   push:
     branches:
