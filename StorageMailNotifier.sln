@@ -28,9 +28,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageMailNotifier.Infrastructure.IoC", "src\StorageMailNotifier.Infrastructure.IoC\StorageMailNotifier.Infrastructure.IoC.csproj", "{3F7FE653-8928-4254-9771-0270D6D2752F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Delivery", "0 - Delivery", "{91A6C97F-7DEA-4B2B-A5E4-A0B73F9C89D0}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\ci-cd-pipeline.yml = .github\workflows\ci-cd-pipeline.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

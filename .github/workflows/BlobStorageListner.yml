@@ -1,4 +1,4 @@
-name: CI-CD Pipeline
+name: Build and deploy .NET Core application to Function App BlobStorageListner
 on:
   push:
     branches:
@@ -42,5 +42,5 @@ jobs:
       uses: Azure/functions-action@v1
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        publish-profile: ${{ secrets.BlobStorageListner_A037 }}
+        publish-profile: ${{ secrets.BlobStorageListner_22CC }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
