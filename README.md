@@ -17,8 +17,11 @@ The `storageMailNotifier` is a .NET application designed to automatically send a
 - **Mock Libraries:** Gain experience with NSubstitute for unit testing
 - **Infrastructure Automation:** Learn how to use Terraform with Azure
 
-## Flow 
+## Flow 🌀
 ![Flow Diagram](https://github.com/Raffael-Eloi/storageMailNotifier/assets/51720161/defd422a-45d5-43af-8a99-258ac456ffcd)
+
+## Architecture 📝
+![image](https://github.com/Raffael-Eloi/storageMailNotifier/assets/51720161/f74621fe-1daa-4646-a25d-6587802ecd8f)
 
 ## Prerequisites ✅
 
