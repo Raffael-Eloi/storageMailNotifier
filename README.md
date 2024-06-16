@@ -23,6 +23,9 @@ The `storageMailNotifier` is a .NET application designed to automatically send a
 ## Architecture 📝
 ![image](https://github.com/Raffael-Eloi/storageMailNotifier/assets/51720161/f74621fe-1daa-4646-a25d-6587802ecd8f)
 
+## How it works ⭐
+![storageMailNotifierExample](https://github.com/Raffael-Eloi/storageMailNotifier/assets/51720161/e972f7e1-df46-4e09-8a58-da0092489f71)
+
 ## Prerequisites ✅
 
 Before running the `Blob.Storage.Listener` project, ensure you have the following prerequisites installed:
